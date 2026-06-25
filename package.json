@@ -2,6 +2,9 @@
   "name": "app",
   "private": true,
   "devDependencies": {
-    "esbuild": "^0.27.0"
+    "esbuild": "^0.28.1"
   },
-"scripts": { "build": "esbuild app/javascript/* --bundle --outdir=app/assets/builds" }}
+  "scripts": {
+    "build": "esbuild app/javascript/* --bundle --outdir=app/assets/builds"
+  }
+}
