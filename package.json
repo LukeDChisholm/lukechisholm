@@ -5,6 +5,6 @@
     "esbuild": "^0.28.1"
   },
   "scripts": {
-    "build": "esbuild app/javascript/* --bundle --outdir=app/assets/builds"
+    "build": "esbuild ./app/javascript/entrypoints/application.js --bundle --outdir=app/assets/builds"
   }
 }
