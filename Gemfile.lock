@@ -106,6 +106,8 @@ GEM
     ed25519 (1.4.0)
     erb (5.0.1)
     erubi (1.13.1)
+    esbuild-rails (0.1.4)
+      rails (>= 6.0.0)
     et-orbi (1.2.11)
       tzinfo
     fugit (1.11.1)
@@ -365,6 +367,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  esbuild-rails (~> 0.1.4)
   importmap-rails
   jbuilder
   jsbundling-rails (~> 1.3)
