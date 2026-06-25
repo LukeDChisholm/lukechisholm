@@ -8,3 +8,154 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+<style>*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica;
+  font-size: clamp(1rem, 2.0vw, 2rem);
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: -0.0025em;
+  line-height: 1;
+  min-height: 0vh;
+  place-items: center;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  background: #ffffff;
+  margin: 0;
+
+}
+
+.content {
+  margin: 1em 1em;
+  background: #ffffff;
+  color: #000000;
+  display: grid;
+
+
+}
+link{
+  border-radius: 50px;
+}
+.info-card {
+  margin: 1.5em;
+  box-shadow: 10px 10px 5px #21a3e06d;
+  display: flex;
+  border-radius: 5px;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #225ea8;
+}
+.info-text {
+    display: grid;
+    margin: 1.5em;
+}
+.tabs-header {
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  text-align: center;
+  font-family: Helvetica;
+  display: flex;
+  background: #21a5e0;
+  color: #FFF;
+  margin: 0;
+}
+.tabs-subheader {
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  text-align: center;
+  font-family: Helvetica;
+  display: flex;
+  background: #225ea8;
+  color: #FFF;
+  margin: 1em 0.5em 0em;
+}
+.tabs-tail {
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  #height: 50px;
+  text-align: left;
+  font-family: Helvetica;
+  display: flex;
+  background: #225ea8;
+  color: #FFF;
+  margin: 0;
+}
+.tail-content {
+  margin: .5em .5em;
+  display: grid;
+  align-items: center;
+  float:left;
+
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+
+}
+
+.tab {
+  margin: 0em 0.5em 0.2em;
+  # 30px;
+  float: left;
+  display: flex;
+
+  text-align: center;
+  align-items: last baseline;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+}
+
+.home-button {
+  margin: 0;
+  # 30px;
+  float: left;
+
+  display: flex;
+  position: relative;
+  width: 175px;
+  height: 125px;
+
+}
+
+.home-button video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 175px;
+  height: 125px;
+  z-index: 10;
+  background: transparent;
+}
+
+.tab-current {
+  font-weight: bold;
+  margin: 0;
+}
+
+
+</style>

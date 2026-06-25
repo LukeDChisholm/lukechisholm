@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get "/blog", to: "blog#blog"
+  get "/blog/videogames"
+  get "/blog/shows"
+  get "/blog/movies"
+  get "/about", to: "pages#about"
+  get "/software", to: "pages#software"
+  get "/career", to: "pages#career"
   root "welcome#index"
   get "welcome/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

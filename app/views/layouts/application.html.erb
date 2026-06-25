@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Lukehome" %></title>
+    <title><%= content_for(:title) || "Luke Chisholm" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -13,16 +13,37 @@
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" href="/Moon.png" type="image/png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%#= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body>
-    <%= yield %>
+  <div class="tabs-header">
+  <div class="home-button">
+  <video autoplay disablepictureinpicture loop muted playsinline>
+  <source src="/lchome.webm" type="video/webm">
+Your browser does not support the video tag.
+</video>
+<a href="/" class="home-link">
+  </div>
+  <div class="tab">
+    <a class="<% if @currCareer %> tab-current <% end %>" href="/career">CAREER</a>
+  </div>
+  <div class="tab">
+    <a class="<% if @currSoftware %> tab-current <% end %>" href="/software">SOFTWARE</a>
+  </div>
+  <div class="tab">
+    <a class="<% if @currBlog %> tab-current <% end %>" href="/blog">BLOG</a>
+  </div>
+  <div class="tab">
+    <a class="<% if @currAbout %> tab-current <% end %>" href="/about">ABOUT ME</a>
+  </div>
+  </div>
+
   </body>
+    <%= yield %>
 </html>
