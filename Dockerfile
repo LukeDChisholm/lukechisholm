@@ -32,6 +32,10 @@ FROM base AS build
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libyaml-dev pkg-config && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh && \
+    bash nodesource_setup.sh
+RUN apt-get install -y nodejs
+RUN npm install --global yarn
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
